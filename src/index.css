@@ -93,3 +93,53 @@
 .home-nav ul li a:hover {
     border-bottom-color: var(--primary-dark-color);
 }
+
+.btn {
+    display: inline-block;
+    padding: .2rem .5rem;
+    text-decoration: none;
+    font-size: 1.3rem;
+    border-radius: 10px;
+}
+
+.btn-primary-dark-solid {
+    background-color: var(--primary-dark-color);
+    color: var(--primary-light-color);
+}
+
+.btn-primary-dark-solid:hover {
+    background-color: var(--primary-light-color);
+    color: var(--primary-dark-color);
+    text-decoration: underline;
+}
+
+.btn-primary-dark-outline {
+    border: 4px var(--primary-dark-color) solid;
+    color: var(--primary-dark-color);
+}
+
+.btn-primary-dark-outline:hover {
+    border: 4px var(--secondary-dark-color) solid;
+    color: var(--secondary-dark-color);
+}
+
+.btn-primary-light-solid {
+    background-color: var(--primary-light-color);
+    color: var(--primary-dark-color);
+}
+
+.btn-primary-light-solid:hover {
+    background-color: var(--primary-dark-color);
+    color: var(--primary-light-color);
+    text-decoration: underline;
+}
+
+.btn-primary-light-outline {
+    border: 4px var(--primary-light-color) solid;
+    color: var(--primary-light-color);
+}
+
+.btn-primary-light-outline:hover {
+    border: 4px var(--secondary-light-color) solid;
+    color: var(--secondary-light-color);
+}

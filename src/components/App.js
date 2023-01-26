@@ -1,15 +1,11 @@
-import { useState } from "react"
-import HomeHeader from "./HomeHeader"
-import NavMenu from "./NavMenu"
+
+import { Route, Routes } from "react-router-dom"
+import Home from "./pages/Home"
 function App() {
   return (
-    <>
-        <NavMenu />
-        <HomeHeader/>
-        <div className="container">
-        
-        </div>    
-    </>
+    <Routes>
+        <Route path="/" element={<Home />} />
+    </Routes>
   )
 }
 
