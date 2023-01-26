@@ -1,19 +1,20 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPray } from "@fortawesome/free-solid-svg-icons";
+import {Link, NavLink} from 'react-router-dom';
 
-function NavMenu({ navigation}) {
+function NavMenu() {
   return (
     <div className='home-nav'>
       <section className='logo'>
-        <a href="/">
+        <Link to="/">
             <FontAwesomeIcon icon={faPray} color='#324777'/>
-        </a>
+        </Link>
         <h1>Prayer List Manager</h1>
       </section>
       <nav>
         <ul>
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
+            <li><NavLink to="/">Home</NavLink></li>
+            <li><NavLink to="/requests">Prayer Requests</NavLink></li>
             <li><a href="#">Link 3</a></li>
         </ul>
       </nav>

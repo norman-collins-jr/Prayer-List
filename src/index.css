@@ -93,6 +93,9 @@
 .home-nav ul li a:hover {
     border-bottom-color: var(--primary-dark-color);
 }
+.home-nav ul li a.active {
+    border-bottom-color: var(--primary-dark-color);
+}
 
 .btn {
     display: inline-block;
@@ -142,4 +145,22 @@
 .btn-primary-light-outline:hover {
     border: 4px var(--secondary-light-color) solid;
     color: var(--secondary-light-color);
+}
+.full-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-light-color);
+    color: var(--primary-dark-color);
+    width: 100%;
+    height: 100vh;
+}
+
+.full-screen h2 {
+    font-size: 4rem;
+}
+
+.full-screen p {
+    font-size: 2rem;
 }
