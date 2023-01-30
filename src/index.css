@@ -17,6 +17,8 @@
     
     .container {
         max-width: 1200px;
+        margin: 0 auto;
+            padding: 1rem 1rem;
     
     }
     
@@ -164,3 +166,24 @@
 .full-screen p {
     font-size: 2rem;
 }
+.request-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.request-item {
+    border: 3px var(--primary-dark-color) solid;
+    border-radius: 5px;
+
+}
+
+.request-item .title {
+    display: flex;
+    width: 100%;
+    padding: .2rem .5rem;
+    background-color: var(--primary-light-color);
+}
+
+.request-item .info {}
+
+.request-item .action-nav {}

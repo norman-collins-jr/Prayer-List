@@ -1,8 +1,8 @@
-function RequestList() {
+function RequestList({children}) {
   return (
-    <div>
-      
-    </div>
+    <section className="request-list">
+        {children}
+    </section>
   )
 }
 

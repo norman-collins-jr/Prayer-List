@@ -3,16 +3,21 @@ import { Route, Routes } from "react-router-dom"
 import Home from "./pages/Home"
 import NotFound from "./pages/NotFound"
 import Requests from "./pages/Requests"
+import EditRequest from "./pages/EditRequest"
 import { useState } from "react"
-import allRequests from "../RequestPopulate"
+import { useContext, RequestContext } from "../contexts/RequestsContext"
+import RequestPopulate from "../RequestPopulate"
 function App() {
-    const [requests, setRequests] = useState(allRequests);
+    const [requests, setRequests] = useState(RequestPopulate);
   return (
-    <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/requests" element={<Requests/>} state={{requests}}/>
-        <Route path="*" element={<NotFound />} />
-    </Routes>
+    <RequestContext.Provider value={[requests, setRequests]}>
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/requests" element={<Requests/>} />
+            <Route path="/request/edit/:id" element={<EditRequest/>} />
+            <Route path="*" element={<NotFound />} />
+        </Routes>
+    </RequestContext.Provider>
   )
 }
 
