@@ -7,9 +7,7 @@ function Home() {
     <>
         <NavMenu />
         <HomeHeader title='Prayer List Manager' lead='Manage your prayer requests'/>
-        <Container>
 
-        </Container>   
     </>
     )
 }

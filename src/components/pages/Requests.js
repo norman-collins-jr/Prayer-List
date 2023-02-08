@@ -6,9 +6,9 @@ import RequestItem from "../RequestItem";
 import { useContext } from "react";
 import { RequestContext } from "../../contexts/RequestsContext";
 
-function Requests(props) {
+function Requests() {
     const [requests, setRequests] = useContext(RequestContext);
-    console.log(props);
+    
   return (
     <>
         <NavMenu />
@@ -16,9 +16,10 @@ function Requests(props) {
                 <Container>
                     <RequestList>
                         {
-                            requests.map((val)=>{
+                            requests.map((val,index)=>{
                                 return <RequestItem 
-                                    key={val.id}
+                                    key={index}
+                                    id={val.id}
                                     user={val.user}
                                     title={val.title}
                                     desc={val.desc}

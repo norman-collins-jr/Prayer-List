@@ -172,9 +172,9 @@
 }
 
 .request-item {
-    border: 3px var(--primary-dark-color) solid;
+    border: 1px var(--primary-dark-color) solid;
     border-radius: 5px;
-
+    margin: .3rem 0;
 }
 
 .request-item .title {
@@ -184,6 +184,20 @@
     background-color: var(--primary-light-color);
 }
 
-.request-item .info {}
+.request-item .info {
+    flex: 75%;
+}
 
-.request-item .action-nav {}
+.request-item .action {
+    flex: 25%;
+    text-align: right;
+}
+
+.request-item .action ul {
+    list-style-type: none;
+}
+
+.request-item .action ul li {
+    display: inline-block;
+    padding-left: 5px;
+}
