@@ -148,6 +148,17 @@
     border: 4px var(--secondary-light-color) solid;
     color: var(--secondary-light-color);
 }
+.btn-primary-red-solid {
+    background-color: red;
+    color: black;
+    cursor: pointer;
+}
+
+.btn-primary-green-solid {
+    background-color: green;
+    color: black;
+    cursor: pointer;
+}
 .full-screen {
     display: flex;
     flex-direction: column;

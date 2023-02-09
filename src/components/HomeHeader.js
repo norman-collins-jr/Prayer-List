@@ -1,11 +1,12 @@
 
 import PrimaryLightButton from "./shared/PrimaryLightButton"
+import { Link } from 'react-router-dom'
 function HomeHeader({ title, lead}) {
   return (
     <header className='home'>
         <h2>{title}</h2>
         <p>{lead}</p>
-        <PrimaryLightButton link='#'>Submit request</PrimaryLightButton>
+        <Link to="/request/new" className="btn btn-primary-light-solid">Add a Request</Link>
     </header>
   )
 }

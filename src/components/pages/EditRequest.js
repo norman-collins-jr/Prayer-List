@@ -1,17 +1,26 @@
 import { useParams } from "react-router-dom"
 import { useContext } from "react";
 import { RequestContext } from "../../contexts/RequestsContext";
+import { useNavigate } from 'react-router-dom';
 import NavMenu from "../NavMenu";
 import Main from "../shared/Main";
 import Container from "../shared/Container";
 function EditRequest() {
     const [requests, setRequests] = useContext(RequestContext);
     const { id } = useParams();
+    const navigate=useNavigate();
     const thisRequest=requests.find(value=>value.id==id);
+    const indexNum=requests.findIndex(element => element.id==id);
     const changeRequest=(e)=>{
       console.log(e);
       e.preventDefault();
-      
+      requests[indexNum].title = document.getElementById('title').value;
+      requests[indexNum].desc = document.getElementById('desc').value;
+      requests[indexNum].date = document.getElementById('date').value;
+      requests[indexNum].answered = document.getElementById('answered').checked;
+
+      setRequests(requests);
+      navigate("/requests");
     } 
   return (
     <>

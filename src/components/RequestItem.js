@@ -12,7 +12,7 @@ function RequestItem({ id, user, title, desc, answered, date }) {
             <div className="action">
                 <ul>
                     <li><Link to={`/request/edit/${id}`}><FontAwesomeIcon icon={faPen} color='#324777'/></Link></li>
-                    <li><FontAwesomeIcon icon={faXmark} color='#324777'/></li>
+                    <li><Link to={`/request/delete/${id}`}><FontAwesomeIcon icon={faXmark} color='#324777'/></Link></li>
                 </ul>
             </div>
         </div>

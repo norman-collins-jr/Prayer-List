@@ -15,7 +15,7 @@ function NavMenu() {
         <ul>
             <li><NavLink to="/">Home</NavLink></li>
             <li><NavLink to="/requests">Prayer Requests</NavLink></li>
-            <li><a href="#">Link 3</a></li>
+            <li><NavLink to="/request/new">New Request</NavLink></li>
         </ul>
       </nav>
     </div>
